@@ -53,9 +53,11 @@ print()
 // 导致 heapUsed 飙升到 164.24 MB
 let banana = new Fruit("banana", 5)
 print()
+
 banana = null; // 让根节点无法通过banana指向fruit实例，使得其能够被垃圾回收
 global.gc()
 print()
+
 
 /**
  * @SCRIPT - node --expose-gc index
