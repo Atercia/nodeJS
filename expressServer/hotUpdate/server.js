@@ -1,33 +1,57 @@
 var express = require("express")
+var bodyParser = require("body-parser")
 var app = express()
+app.all("*", function (req, res, next) {
+  // 设置请求头为允许跨域
+  res.header("Access-Control-Allow-Origin", "*")
+  // 设置服务器支持的所有头信息字段
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild, sessionToken"
+  )
+  // 设置服务器支持的所有跨域请求的方法
+  res.header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, OPTIONS")
+  if (req.method.toLowerCase() == "options") {
+    res.send(200) // 让options尝试请求快速结束
+  } else {
+    next()
+  }
+})
 
-app.use("/public", express.static("D:/public"))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+// app.use("/public", express.static("D:/public"))
 
-const UPDATE_FILE_URL = "http://127.0.0.1:8083/update.zip"
 // 或update.zip , 注意必须确保update.asar位于zip包的根目录
 app.get("/", function (req, res) {
   res.send("Hello World")
 })
+var desktop_app_version = "2.2.5"
+var desktop_app_URL = "http://qs9hmmjyf.hn-bkt.clouddn.com/update.zip?e=1619777757&attname=&token=YFYvys--tnzU5PsERz_aNHHyziYDyNPOQVYBWPPv:ySY8xA2j3TaiNHj64uc7PDIhJY4=" // or ../update.zip
+// var desktop_app_URL = "http://127.0.0.1:8083/public/update.zip" // or ../update.zip
 
 app.post("/update", function (req, res) {
-  res.write(
-    JSON.stringify({
-      name: "app",
-      version: "2.2.3",
-      asar: UPDATE_FILE_URL,
-      info: "1.fix bug\n2.feat...",
-    }).replace(/[\/]/g, "\\/")
-  )
+  console.info("接收到更新请求", { reqInfo: JSON.stringify(req.body) })
+  if (req.body && req.body.current != desktop_app_version) {
+    // check for server side
+    res.write(
+      JSON.stringify({ last: desktop_app_version, source: desktop_app_URL }).replace(
+        /[\/]/g,
+        "\\/"
+      )
+    )
+  } else {
+    res.write(JSON.stringify({ last: desktop_app_version }).replace(/[\/]/g, "\\/"))
+  }
   res.end()
 })
+
 app.listen(8082)
 console.log("basicServer run port: 8082")
 
-var fileServer = app.listen(8083, function () {
-  //   var host = fileServer.address()
-  var port = fileServer.address().port
-  console.info("fileServer run port 8083")
-})
-fileServer.on("error", (err) => {
-  console.info({ START_FILE_SERVER_FAILED: err })
-})
+// var fileServer = app.listen(8083, function () {
+//   console.info("fileServer run port 8083")
+// })
+// fileServer.on("error", (err) => {
+//   console.info({ START_FILE_SERVER_FAILED: err })
+// })
