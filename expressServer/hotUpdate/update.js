@@ -27,11 +27,13 @@ app.get("/", function (req, res) {
   res.send("Hello World")
 })
 var desktop_app_version = "2.2.5"
-var desktop_app_URL = "http://qs9hmmjyf.hn-bkt.clouddn.com/update.zip?e=1619777757&attname=&token=YFYvys--tnzU5PsERz_aNHHyziYDyNPOQVYBWPPv:ySY8xA2j3TaiNHj64uc7PDIhJY4=" // or ../update.zip
+var desktop_app_URL =
+  "http://qs9hmmjyf.hn-bkt.clouddn.com/update.zip?e=1620294658&attname=&token=YFYvys--tnzU5PsERz_aNHHyziYDyNPOQVYBWPPv:PjK5aXX3T7pkuyKKaGGxqRef0nU=" // or ../update.zip
 // var desktop_app_URL = "http://127.0.0.1:8083/public/update.zip" // or ../update.zip
 
 app.post("/update", function (req, res) {
-  console.info("接收到更新请求", { reqInfo: JSON.stringify(req.body) })
+  const d = new Date()
+  console.info(`${d.getHours()}:${d.getMinutes()} — 接收到更新请求`)
   if (req.body && req.body.current != desktop_app_version) {
     // check for server side
     res.write(
@@ -48,10 +50,3 @@ app.post("/update", function (req, res) {
 
 app.listen(8082)
 console.log("basicServer run port: 8082")
-
-// var fileServer = app.listen(8083, function () {
-//   console.info("fileServer run port 8083")
-// })
-// fileServer.on("error", (err) => {
-//   console.info({ START_FILE_SERVER_FAILED: err })
-// })

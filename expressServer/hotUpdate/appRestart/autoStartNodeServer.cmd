@@ -1,0 +1,1 @@
+chcp 65001 && cmd /K "node appRestart.js"
