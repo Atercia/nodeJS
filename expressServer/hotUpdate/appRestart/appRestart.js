@@ -34,7 +34,7 @@ app.get("/startApp", function (req, res) {
   res.send(MSG)
   setTimeout(() => {
     callRestartCmd()
-  }, 3500) // 延时，确保老版本应用已经退出
+  }, 4000) // 延时，确保老版本应用已经退出
 })
 
 function callRestartCmd() {

@@ -28,7 +28,7 @@ app.get("/", function (req, res) {
 })
 var desktop_app_version = "2.2.5"
 var desktop_app_URL =
-  "http://qs9hmmjyf.hn-bkt.clouddn.com/update.zip?e=1620294658&attname=&token=YFYvys--tnzU5PsERz_aNHHyziYDyNPOQVYBWPPv:PjK5aXX3T7pkuyKKaGGxqRef0nU=" // or ../update.zip
+  "http://qs9hmmjyf.hn-bkt.clouddn.com/update.zip?e=1620300615&attname=&token=YFYvys--tnzU5PsERz_aNHHyziYDyNPOQVYBWPPv:fwhrAK_Bv6yQUa5lOyJtXFC7pG8=" // or ../update.zip
 // var desktop_app_URL = "http://127.0.0.1:8083/public/update.zip" // or ../update.zip
 
 app.post("/update", function (req, res) {

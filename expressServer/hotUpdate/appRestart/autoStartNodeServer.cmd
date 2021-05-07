@@ -1,1 +1,1 @@
-chcp 65001 && cmd /K "node appRestart.js"
+chcp 65001 && cmd /C "start /min node appRestart.js"
