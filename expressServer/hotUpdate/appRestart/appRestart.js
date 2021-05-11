@@ -34,14 +34,16 @@ app.get("/startApp", function (req, res) {
   res.send(MSG)
   setTimeout(() => {
     callRestartCmd()
-  }, 4000) // 延时，确保老版本应用已经退出
+    console.log("延时结束")
+  }, 3000) // 延时，确保老版本应用已经退出
 })
 
 function callRestartCmd() {
   const efIns = child_process.execFile(
     "智慧调度平台.cmd",
     null,
-    { cwd: "D:/TODO/2021-5/dc/test", windowsHide: true }, // 应用目录
+    { cwd: "D:/TODO/2021-5/dc/测试1", windowsHide: true }, // 应用目录
+    // { cwd: "D:/TODO/2021-5/dc/智慧调度平台", windowsHide: true }, // 应用目录
     function (error, stdout, stderr) {
       if (error !== null) {
         logger.log("子进程exec error" + error)
@@ -60,5 +62,6 @@ function callRestartCmd() {
   })
 }
 
-logger.log("监听8085端口")
+logger.log("监听8085端口,http://192.168.2.124:8085/startApp")
+console.log("TEST")
 app.listen(8085)

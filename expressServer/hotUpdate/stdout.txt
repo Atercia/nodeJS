@@ -1,0 +1,110 @@
+监听8085端口,http://192.168.2.124:8085/startApp
+17:45 — 接收到重启请求
+子进程使用代码 0 退出
+成功
+"子进程stdout:
+D:\TODO\2021-5\dc\����1>chcp 65001   && cmd /C app.exe appEndOuput=-1 
+Active code page: 65001
+
+17:45:34.616 > NODE_JS进程:getCurEndOutput初始化开始
+17:45:34.620 > {
+  processArg: [ 'D:\\TODO\\2021-5\\dc\\测试1\\app.exe', 'appEndOuput=-1' ]
+}
+17:45:34.622 > NODEJS进程____完成output获取 { customOutput: -1, DEF_OUTPUT: -1 }
+17:45:34.623 > NODEJS进程__APP_END_INFO {
+  APP_END_OUTPUT: -1,
+  IS_PAD: true,
+  SCREEN_END_IP_LIST: [],
+  HAS_SET_APP_OUTPUT: true
+}
+17:45:34.625 > 加载工具utils
+17:45:34.625 > 加载后台服务
+17:45:34.821 > HOT_UPDATE_ORIGIN_APP_INFO {
+  originPackage: { name: 'hgs-screen', version: '2.2.8' },
+  apiCfg: {
+    BACK_IP: 'http://192.168.2.122:9005/',
+    API: 'http://192.168.2.122:9005/api/versionUpdate/update',
+    Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cGUiOiJKV1QifQ==.eyJpc3MiOm51bGwsInN1YiI6IjIwMTkwNzIyMTUxMjMxODYzMDAwMDAwMTAiLCJhdWQiOm51bGwsImV4cCI6MTYwMDkxNzQwMTA1MCwiaWF0IjoxNTk4MzI1NDAxMDUwfQ==.SWsFtCa1ia2icMf5pmQ0iLEoKj1SHLUZPcne+TcDZpA='
+  }
+}
+17:45:34.822 > TEST_NEW_3_应用NODE_JS层初始化开始
+17:45:34.826 > {
+  NODE_END_CFG: {
+    dev: false,
+    isPad: true,
+    appEndOutput: -1,
+    apiPort: 8680,
+    name: '触控端',
+    host: '192.168.2.124:8680'
+  }
+}
+17:45:34.832 > ELECTRON_CHECK_APP_INSTANCE_LOCK
+17:45:34.832 > ELECTRON_createWindow_&&_START_API_SERVER
+17:45:34.858 > ELECTRON_mainWindow_startCreateWindow
+17:45:34.858 > NODE_JS: initApiServer 8680
+17:45:34.862 > NODE_JS: httpServer start at 8680
+17:45:34.862 > 开始使用UPD广播来获取其他设备信息, IP、端口
+17:45:34.863 > UDP 后台服务启动中...
+17:45:34.889 > 初始化IPC
+17:45:34.891 > UDP Server listening on 0.0.0.0:33333
+17:45:35.831 > ELECTRON_mainWindow_event:ready-to-show
+17:47:10.820 > ELECTRON_AP_EVENT: ON_WINDOW_ALL_CLOSD , CLOSE_APP
+17:47:10.823 > ELECTRON_mainWindow_event:closed
+
+"子进程stderr:-
+子进程使用代码 0 关闭所有 stdio
+17:58 — 接收到重启请求
+子进程使用代码 0 退出
+成功
+"子进程stdout:
+D:\TODO\2021-5\dc\����1>chcp 65001   && cmd /C app.exe appEndOuput=7 
+Active code page: 65001
+
+17:58:31.445 > NODE_JS进程:getCurEndOutput初始化开始
+17:58:31.449 > {
+  processArg: [ 'D:\\TODO\\2021-5\\dc\\测试1\\app.exe', 'appEndOuput=7' ]
+}
+17:58:31.451 > NODEJS进程____完成output获取 { customOutput: 7, DEF_OUTPUT: -1 }
+17:58:31.451 > NODEJS进程__APP_END_INFO {
+  APP_END_OUTPUT: 7,
+  IS_PAD: true,
+  SCREEN_END_IP_LIST: [],
+  HAS_SET_APP_OUTPUT: true
+}
+17:58:31.453 > 加载工具utils
+17:58:31.454 > 加载后台服务
+17:58:31.655 > HOT_UPDATE_ORIGIN_APP_INFO {
+  originPackage: { name: 'hgs-screen', version: '2.2.8' },
+  apiCfg: {
+    BACK_IP: 'http://192.168.2.122:9005/',
+    API: 'http://192.168.2.122:9005/api/versionUpdate/update',
+    Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cGUiOiJKV1QifQ==.eyJpc3MiOm51bGwsInN1YiI6IjIwMTkwNzIyMTUxMjMxODYzMDAwMDAwMTAiLCJhdWQiOm51bGwsImV4cCI6MTYwMDkxNzQwMTA1MCwiaWF0IjoxNTk4MzI1NDAxMDUwfQ==.SWsFtCa1ia2icMf5pmQ0iLEoKj1SHLUZPcne+TcDZpA='
+  }
+}
+17:58:31.657 > TEST_NEW_3_应用NODE_JS层初始化开始
+17:58:31.661 > {
+  NODE_END_CFG: {
+    dev: false,
+    isPad: true,
+    appEndOutput: 7,
+    apiPort: 8680,
+    name: '触控端',
+    host: '192.168.2.124:8680'
+  }
+}
+17:58:31.670 > {
+  START_FILE_SERVER_FAILED: 'Error: listen EADDRINUSE: address already in use :::8081\n' +
+    '    at Server.setupListenHandle [as _listen2] (net.js:1306:16)\n' +
+    '    at listenInCluster (net.js:1354:12)\n' +
+    '    at Server.listen (net.js:1442:7)\n' +
+    '    at Function.listen (D:\\TODO\\2021-5\\dc\\测试1\\resources\\app.asar\\node_modules\\express\\lib\\application.js:618:24)\n' +
+    '    at U (D:\\TODO\\2021-5\\dc\\测试1\\resources\\app.asar\\electron-main.js:1:50740)\n' +
+    '    at Module.<anonymous> (D:\\TODO\\2021-5\\dc\\测试1\\resources\\app.asar\\electron-main.js:1:56231)\n' +
+    '    at e (D:\\TODO\\2021-5\\dc\\测试1\\resources\\app.asar\\electron-main.js:1:124)\n' +
+    '    at Object.<anonymous> (D:\\TODO\\2021-5\\dc\\测试1\\resources\\app.asar\\electron-main.js:1:28190)\n' +
+    '    at e (D:\\TODO\\2021-5\\dc\\测试1\\resources\\app.asar\\electron-main.js:1:124)\n' +
+    '    at D:\\TODO\\2021-5\\dc\\测试1\\resources\\app.asar\\electron-main.js:1:928'
+}
+
+"子进程stderr:-
+子进程使用代码 0 关闭所有 stdio
