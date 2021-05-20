@@ -1,131 +1,27 @@
 监听8085端口,http://192.168.2.124:8085/startApp
-19:31 — 接收到重启请求
-子进程使用代码 0 退出
-成功
-"子进程stdout:
-D:\TODO\2021-5\dc\����1>chcp 65001   && cmd /C app.exe appEndOuput=7 
-Active code page: 65001
-
-19:31:25.058 > NODE_JS进程:getCurEndOutput初始化开始
-19:31:25.062 > {
-  processArg: [ 'D:\\TODO\\2021-5\\dc\\测试1\\app.exe', 'appEndOuput=7' ]
-}
-19:31:25.064 > NODEJS进程____完成output获取 { customOutput: 7, DEF_OUTPUT: 7 }
-19:31:25.064 > NODEJS进程__APP_END_INFO {
-  APP_END_OUTPUT: 7,
-  IS_PAD: true,
-  SCREEN_END_IP_LIST: [],
-  HAS_SET_APP_OUTPUT: true
-}
-19:31:25.204 > HOT_UPDATE_ORIGIN_APP_INFO {
-  originPackage: { name: 'hgs-screen', version: '2.2.7' },
-  apiCfg: {
-    BACK_IP: 'http://192.168.2.122:9005/',
-    API: 'http://192.168.2.122:9005/api/versionUpdate/update',
-    Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cGUiOiJKV1QifQ==.eyJpc3MiOm51bGwsInN1YiI6IjIwMTkwNzIyMTUxMjMxODYzMDAwMDAwMTAiLCJhdWQiOm51bGwsImV4cCI6MTYwMDkxNzQwMTA1MCwiaWF0IjoxNTk4MzI1NDAxMDUwfQ==.SWsFtCa1ia2icMf5pmQ0iLEoKj1SHLUZPcne+TcDZpA='
-  }
-}
-19:31:25.207 > 加载工具utils
-19:31:25.207 > 加载后台服务
-19:31:25.261 > TEST_NEW_3_应用NODE_JS层初始化开始
-19:31:25.266 > {
-  NODE_JS_LAYER_CFG: {
-    dev: false,
-    isPad: true,
-    appEndOutput: 7,
-    apiPort: 8680,
-    name: '触控端',
-    host: '192.168.2.124:8680'
-  }
-}
-19:31:25.271 > {
-  processArg: [ 'D:\\TODO\\2021-5\\dc\\测试1\\app.exe', 'appEndOuput=7' ]
-}
-19:31:25.272 > NODEJS进程____完成output获取 { customOutput: 7, DEF_OUTPUT: 7 }
-19:31:25.272 > ELECTRON_CHECK_APP_INSTANCE_LOCK
-19:31:25.272 > GET_RESTART_VAL
-19:31:25.273 > ELECTRON_TEST false
-19:31:25.275 > ELECTRON_createWindow_TEST
-19:31:25.275 > TEST_END
-19:31:25.302 > ELECTRON_mainWindow_startCreateWindow
-19:31:25.303 > NODE_JS: initApiServer 8680
-19:31:25.306 > NODE_JS: httpServer start at 8680
-19:31:25.307 > 开始使用UPD广播来获取其他设备信息, IP、端口
-19:31:25.307 > UDP 后台服务启动中...
-19:31:25.339 > 初始化IPC
-19:31:25.339 > UDP Server listening on 0.0.0.0:33333
-19:31:25.340 > START_FILE_SERVER_SUCCESS
-19:31:26.211 > ELECTRON_mainWindow_event:ready-to-show
-19:31:35.733 > ELECTRON_mainWindow.close()
-19:31:35.764 > ELECTRON_AP_EVENT: ON_WINDOW_ALL_CLOSD , CLOSE_APP
-19:31:35.776 > ELECTRON_mainWindow_event:closed
-
-"子进程stderr:-
-子进程使用代码 0 关闭所有 stdio
-19:33 — 接收到重启请求
-子进程使用代码 0 退出
-成功
-"子进程stdout:
-D:\TODO\2021-5\dc\����1>chcp 65001   && cmd /C app.exe appEndOuput=4 
-Active code page: 65001
-
-19:33:14.527 > NODE_JS进程:getCurEndOutput初始化开始
-19:33:14.532 > {
-  processArg: [ 'D:\\TODO\\2021-5\\dc\\测试1\\app.exe', 'appEndOuput=4' ]
-}
-19:33:14.534 > NODEJS进程____完成output获取 { customOutput: 4, DEF_OUTPUT: 7 }
-19:33:14.534 > NODEJS进程__APP_END_INFO {
-  APP_END_OUTPUT: 4,
-  IS_PAD: false,
-  SCREEN_END_IP_LIST: [],
-  HAS_SET_APP_OUTPUT: true
-}
-19:33:14.674 > HOT_UPDATE_ORIGIN_APP_INFO {
-  originPackage: { name: 'hgs-screen', version: '2.2.7' },
-  apiCfg: {
-    BACK_IP: 'http://192.168.2.122:9005/',
-    API: 'http://192.168.2.122:9005/api/versionUpdate/update',
-    Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cGUiOiJKV1QifQ==.eyJpc3MiOm51bGwsInN1YiI6IjIwMTkwNzIyMTUxMjMxODYzMDAwMDAwMTAiLCJhdWQiOm51bGwsImV4cCI6MTYwMDkxNzQwMTA1MCwiaWF0IjoxNTk4MzI1NDAxMDUwfQ==.SWsFtCa1ia2icMf5pmQ0iLEoKj1SHLUZPcne+TcDZpA='
-  }
-}
-19:33:14.676 > 加载工具utils
-19:33:14.677 > 加载后台服务
-19:33:14.731 > TEST_NEW_3_应用NODE_JS层初始化开始
-19:33:14.735 > {
-  NODE_JS_LAYER_CFG: {
-    dev: false,
-    isPad: false,
-    appEndOutput: 4,
-    apiPort: 8684,
-    name: '大屏第4路输出',
-    host: '192.168.2.124:8684'
-  }
-}
-19:33:14.739 > {
-  processArg: [ 'D:\\TODO\\2021-5\\dc\\测试1\\app.exe', 'appEndOuput=4' ]
-}
-19:33:14.740 > NODEJS进程____完成output获取 { customOutput: 4, DEF_OUTPUT: 7 }
-19:33:14.741 > ELECTRON_CHECK_APP_INSTANCE_LOCK
-19:33:14.741 > GET_RESTART_VAL
-19:33:14.741 > ELECTRON_TEST false
-19:33:14.743 > ELECTRON_createWindow_TEST
-19:33:14.744 > TEST_END
-19:33:14.769 > ELECTRON_mainWindow_startCreateWindow
-19:33:14.770 > NODE_JS: initApiServer 8684
-19:33:14.773 > NODE_JS: httpServer start at 8684
-19:33:14.774 > 开始使用UPD广播来获取其他设备信息, IP、端口
-19:33:14.804 > 初始化IPC
-19:33:15.728 > ELECTRON_mainWindow_event:ready-to-show
-19:33:33.415 > ELECTRON_AP_EVENT: ON_WINDOW_ALL_CLOSD , CLOSE_APP
-19:33:33.418 > ELECTRON_mainWindow_event:closed
-
-"子进程stderr:-
-子进程使用代码 0 关闭所有 stdio
-19:34 — 接收到重启请求
+10:7 — 接收到重启请求
 子进程使用代码 0 退出
 成功
 "子进程stdout:
 D:\TODO\2021-5\dc\����1>chcp 65001   && cmd /C "start /min app.exe appEndOuput=-1" 
+Active code page: 65001
+
+"子进程stderr:-
+子进程使用代码 0 关闭所有 stdio
+10:23 — 接收到重启请求
+子进程使用代码 0 退出
+成功
+"子进程stdout:
+D:\TODO\2021-5\dc\����1>chcp 65001   && cmd /C "start /min app.exe appEndOuput=7" 
+Active code page: 65001
+
+"子进程stderr:-
+子进程使用代码 0 关闭所有 stdio
+10:29 — 接收到重启请求
+子进程使用代码 0 退出
+成功
+"子进程stdout:
+D:\TODO\2021-5\dc\����1>chcp 65001   && cmd /C "start /min app.exe appEndOuput=7" 
 Active code page: 65001
 
 "子进程stderr:-
