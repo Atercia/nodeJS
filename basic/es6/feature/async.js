@@ -1,17 +1,10 @@
-function a1() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("a1 result ,use time 2")
-    }, 2000)
-  })
+async function test() {
+  await sleep(1000)
+  return "test_1"
 }
-function a2() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      // reject("a2 result , use time 0.5")
-      resolve("a2 result , use time 0.5")
-    }, 500)
-  })
+async function t2() {
+  await sleep(1000)
+  return "test_2"
 }
 /**
  * @async 在函数中 return 一个直接量，async 会把这个直接量通过 Promise.resolve() 封装成 Promise 对象;
@@ -26,11 +19,12 @@ function a2() {
  * ———————————————————————————————
  */
 async function todo() {
-  const v1 = await a1()
+  const v1 = await test()
   console.info("finish a1")
-  const v2 = await a2()
-  throw new Error("test")
+  const v2 = await t2()
+  // throw new Error("test")
   console.info("finish a2")
+  await sleep(1000)
   return { v1, v2 }
 }
 
@@ -56,10 +50,10 @@ todo()
 
 // doMain()
 
-// async function sleep(s) {
-//   return new Promise(function (resolve) {
-//     setTimeout(function () {
-//       resolve(1)
-//     }, s)
-//   })
-// }
+async function sleep(s) {
+  return new Promise(function (resolve) {
+    setTimeout(function () {
+      resolve(1)
+    }, s)
+  })
+}

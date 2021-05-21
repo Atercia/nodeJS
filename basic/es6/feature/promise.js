@@ -32,11 +32,11 @@ console.info("T!2")
 //   }
 // )
 
-Promise.race([p1, p2]).then(
-  (res) => {
-    console.info({ res })
-  },
-  (err) => {
-    console.info({ err })
-  }
-)
+// Promise.race([p1, p2]).then(
+//   (res) => {
+//     console.info({ res })
+//   },
+//   (err) => {
+//     console.info({ err })
+//   }
+// )
