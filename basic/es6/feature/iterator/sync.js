@@ -1,5 +1,7 @@
 /**
- * @AIM (ins)[Symbol.iterator]()
+ * @AIM_为可迭代变量的生成一个同步迭代器
+ * [Symbol.iterator]为方法名，()表示立即调用并返回迭代器
+ * (ins)[Symbol.iterator]()
  * @HINT arr,set,map,arguments,str,NodeList都适用，对象不适用
  * https://mp.weixin.qq.com/s/UI3r3u50vYkrUTVe2DS86A
  */
