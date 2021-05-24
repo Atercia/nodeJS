@@ -52,7 +52,7 @@ waitArr.forEach((item) => {
 res = qcArr
 
 /**
- * @AIM 排序 a-b 签名一项小于后面一项时，保持
+ * @AIM 排序 a-b 前面一项小于后面一项时，保持
  */
 
 waitArr = [1, 2, 3, 4]
@@ -101,7 +101,8 @@ const { name, age, def = "解构默认值", ...obj } = {
 // console.log({ 删除对象多余属性: obj, def })
 
 const compact = (arr) => arr.filter(Boolean)
-res = compact([0, -1, false, 2, undefined, null, "", 3, "a", "e" * 23, NaN, "s", 34]) //[ 1, 2, 3, 'a', 's', 34 ]
+res = compact([0, -1, false, 2, undefined, null, "", 3, "a", "e" * 23, NaN, "s", 34]) 
+//[ 1, 2, 3, 'a', 's', 34 ]
 // console.log("使用Boolean构造函数过滤假值", res)
 
 const hasVal = (val) => {

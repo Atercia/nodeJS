@@ -16,5 +16,13 @@ subA.prototype.getSubVal = function () {
 }
 
 let ins = new subA()
-let res = [ins.getVal(), ins.getSubVal(), a.prototype]
-console.log(res)
+let res = [
+  ins.getVal(),
+  ins.getSubVal(),
+  Object.entries(a.prototype),
+  Object.entries(subA.prototype),
+  Object.entries(ins),
+]
+res.forEach(o=>{
+  console.log(JSON.stringify(o))
+})
