@@ -42,7 +42,7 @@ function callRestartCmd() {
   const efIns = child_process.execFile(
     "智慧调度平台.cmd",
     null,
-    { cwd: "D:/TODO/2021-5/dc/测试1", windowsHide: true }, // 应用目录
+    { cwd: "D:/智慧调度平台", windowsHide: true }, // 应用目录
     // { cwd: "D:/TODO/2021-5/dc/智慧调度平台", windowsHide: true }, // 应用目录
     function (error, stdout, stderr) {
       if (error !== null) {
@@ -62,6 +62,6 @@ function callRestartCmd() {
   })
 }
 
-logger.log("监听8085端口,http://192.168.2.124:8085/startApp")
+logger.log("监听8085端口,http://127.0.0.1:8085/startApp")
 console.log("TEST")
 app.listen(8085)
