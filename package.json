@@ -11,5 +11,9 @@
   "devDependencies": {
     "express": "^4.17.1",
     "windows-shortcuts": "^0.1.6"
+  },
+  "dependencies": {
+    "mongodb": "^4.1.0",
+    "mongoose": "^5.13.7"
   }
 }

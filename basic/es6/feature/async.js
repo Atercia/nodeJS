@@ -50,7 +50,7 @@ todo()
 
 // doMain()
 
-async function sleep(s) {
+function sleep(s) {
   return new Promise(function (resolve) {
     setTimeout(function () {
       resolve(1)
