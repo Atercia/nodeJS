@@ -27,10 +27,8 @@ function* bar() {
   yield "y"
 }
 
-for (let v of bar()) {
-  console.log(v)
-}
-// "x"
-// "a"
-// "b"
-// "y"
+// for (let v of bar()) {
+//   console.log(v)
+// }
+
+
